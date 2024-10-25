@@ -66,7 +66,7 @@
 
       footer {
           display: flex;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: baseline;
           margin-top: 4em;
@@ -85,6 +85,12 @@
 
       footer p:last-child {
           text-align: right;
+      }
+
+      @media screen and (min-width: 481px) {
+          article {
+              padding: 2em 4em;
+          }
       }
   </style>
 </head>
