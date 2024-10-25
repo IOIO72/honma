@@ -19,14 +19,19 @@
 
           --light-bg: ghostwhite;
           --light-shadow: gray;
+          --light-color: black;
 
           --dark-bg: black;
           --dark-shadow: ghostwhite;
+          --dark-color: white;
       }
 
       body {
+          margin: 0;
+          padding: 0;
           font-family: system-ui, sans-serif;
           background: light-dark(var(--light-bg), var(--dark-bg));
+          color: light-dark(var(--light-color), var(--dark-color));
       }
 
       article {
