@@ -20,10 +20,12 @@
           --light-bg: ghostwhite;
           --light-shadow: gray;
           --light-color: black;
+          --light-secondary: gray;
 
           --dark-bg: black;
           --dark-shadow: ghostwhite;
           --dark-color: white;
+          --dark-secondary: ghostwhite;
       }
 
       body {
@@ -45,14 +47,25 @@
           border-radius: 4px;
       }
 
-      h1:first-of-type {
-          margin-top: 0.5em;
+      header {
           margin-bottom: 2em;
+      }
+
+      header > h1 {
+          margin-top: 0.5em;
+          margin-bottom: 0;
           font-size: 2.5rem;
       }
 
-      h2 {
+      header > p {
+          margin-top: 0;
           margin-bottom: 1.25em;
+          color: light-dark(var(--light-secondary), var(--dark-secondary));
+          font-style: italic;
+      }
+
+      h2 {
+          margin-top: 1.75em;
       }
 
       ul {
