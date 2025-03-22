@@ -3,8 +3,22 @@
 <head>
   <title>Tamio Patrick Honma</title>
   <meta name="description" content="Profiles and links of Tamio Patrick Honma on the web">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#f8f8ff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Tamio Patrick Honma">
+  <meta property="og:description" content="UX Engineering · 3D Printing · Tango Argentino">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://honma.de">
+
   <!--
   ____         _          _     _   _                  ____    _ _   _           _                            _____ ___ ___ ___ _____ ____
  / ___| ___   | |_ ___   | |__ | |_| |_ _ __  ___ _   / / /_ _(_) |_| |__  _   _| |__   ___ ___  _ __ ___    / /_ _/ _ \_ _/ _ \___  |___ \
@@ -13,39 +27,50 @@
  \____|\___/   \__\___/  |_| |_|\__|\__| .__/|___(_)_/_/ \__, |_|\__|_| |_|\__,_|_.__(_)___\___/|_| |_| |_/_/  |___\___/___\___//_/  |_____|
                                        |_|               |___/
   -->
+
   <style>
     :root {
         color-scheme: light dark;
 
         --light-bg: ghostwhite;
-        --light-shadow: gray;
-        --light-color: black;
-        --light-secondary: gray;
+        --light-shadow: #bfbfbf;
+        --light-color: #121212;
+        --light-secondary: #595959;
+        --light-link: #0066cc;
+        --light-link-hover: #004080;
 
-        --dark-bg: black;
-        --dark-shadow: green;
-        --dark-color: lightgreen;
-        --dark-secondary: limegreen;
+        --dark-bg: #121212;
+        --dark-shadow: #1a4d1a;
+        --dark-color: #b2ffb2;
+        --dark-secondary: #32cd32;
+        --dark-link: #4dff4d;
+        --dark-link-hover: #66ff66;
     }
 
     body {
         margin: 0;
         padding: 0;
-        font-family: system-ui, sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         background: light-dark(var(--light-bg), var(--dark-bg));
         color: light-dark(var(--light-color), var(--dark-color));
+        line-height: 1.5;
     }
 
-    article {
-        position: absolute;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 1.5rem;
+    }
+
+    .card {
         box-sizing: border-box;
-        margin: 3em 50%;
-        transform: translateX(-50%);
-        width: max-content;
-        max-width: 100%;
-        padding: 1em 2em;
+        width: 100%;
+        max-width: 800px;
+        padding: 1.5rem;
         box-shadow: 4px 4px 12px light-dark(var(--light-shadow), var(--dark-shadow));
-        border-radius: 4px;
+        border-radius: 8px;
     }
 
     header {
@@ -67,27 +92,43 @@
 
     h2 {
         margin-top: 1.75em;
+        margin-bottom: 0.75em;
+    }
+
+    h3 {
+        margin-top: 1.25em;
+        margin-bottom: 0.5em;
     }
 
     ul, dl {
         margin-bottom: 2em;
         list-style-position: outside;
+        padding-left: 2em;
     }
 
     li, dd {
         margin-bottom: 0.5em;
     }
 
-    dl {
-      padding-inline-start: 40px;
-    }
-
     dt {
-      display: list-item;
+        font-weight: bold;
+        margin-bottom: 0.25em;
     }
 
     dd {
-      margin-inline-start: 0;
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: light-dark(var(--light-link), var(--dark-link));
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    a:hover, a:focus {
+        color: light-dark(var(--light-link-hover), var(--dark-link-hover));
+        text-decoration: underline;
     }
 
     footer {
@@ -96,11 +137,11 @@
         justify-content: space-between;
         align-items: baseline;
         margin-top: 4em;
+        gap: 1em;
     }
 
     footer p {
-        flex-grow: 1;
-        flex-shrink: 0;
+        flex: 1 0 auto;
         margin: 0;
         text-align: center;
     }
@@ -114,17 +155,16 @@
     }
 
     @media screen and (min-width: 481px) {
-        article {
-            padding: 2em 4em;
+        .card {
+            padding: 2em 3em;
         }
     }
   </style>
 </head>
 <body>
 
-<main>
-  <article>
-
+<div class="container">
+  <article class="card">
     <header>
       <h1>Tamio Patrick Honma</h1>
       <p>UX Engineering · 3D Printing · Tango Argentino</p>
@@ -136,50 +176,55 @@
       <h3>Business Networks</h3>
 
       <ul>
-        <li><a href="https://www.linkedin.com/in/tamio-honma/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/tamio-honma/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
 
       <h3>Social Media</h3>
 
       <dl>
         <dt>Mastodon</dt>
-        <dd><a rel="me" href="https://gruene.social/@ioio72" target="_blank">@ioio72@gruene.social</a></dd>
+        <dd><a rel="me noopener" href="https://gruene.social/@ioio72" target="_blank">@ioio72@gruene.social</a></dd>
+
         <dt>Pixelfed</dt>
-        <dd><a rel="me" href="https://pixelfed.social/ioio72" target="_blank">@ioio72@pixelfed.social</a></dd>
-        <dt>Redit</dt>
-        <dd><a rel="me" href="https://www.reddit.com/user/Nebulus2000/" target="_blank">u/Nebulus2000</a></dd>
+        <dd><a rel="me noopener" href="https://pixelfed.social/ioio72" target="_blank">@ioio72@pixelfed.social</a></dd>
+
+        <dt>Reddit</dt>
+        <dd><a rel="me noopener" href="https://www.reddit.com/user/Nebulus2000/" target="_blank">u/Nebulus2000</a></dd>
       </dl>
 
       <h3>Maker Communities</h3>
 
       <ul>
-        <li><a href="https://makerworld.com/de/@ioio72" target="_blank">Maker World</a></li>
-        <li><a href="https://www.thingiverse.com/ioio72/" target="_blank">Thingiverse</a></li>
-        <li><a href="https://getwatchmaker.com/user/BysucHMe-" target="_blank">WatchMaker</a></li>
+        <li><a href="https://makerworld.com/de/@ioio72" target="_blank" rel="noopener">Maker World</a></li>
+        <li><a href="https://www.thingiverse.com/ioio72/" target="_blank" rel="noopener">Thingiverse</a></li>
+        <li><a href="https://getwatchmaker.com/user/BysucHMe-" target="_blank" rel="noopener">WatchMaker</a></li>
       </ul>
 
       <h3>Software Development</h3>
 
       <ul>
-        <li><a href="https://github.com/IOIO72" target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/IOIO72" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
 
       <h2>Links</h2>
 
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=UqC5ZqRAQuQ">The Heart of Tango</a></li>
-        <li><a href="https://www.gruene.de/">BÜNDNIS 90/DIE GRÜNEN</a></li>
+        <li><a href="https://www.youtube.com/watch?v=UqC5ZqRAQuQ" target="_blank" rel="noopener">The Heart of Tango</a></li>
+        <li><a href="https://www.gruene.de/" target="_blank" rel="noopener">BÜNDNIS 90/DIE GRÜNEN</a></li>
       </ul>
     </main>
 
     <footer>
-      <p>&copy; 2025</p>
-      <p><a href="mailto:contact@honma.de">contact@honma.de</a></p>
-      <p><a href="https://github.com/IOIO72/ama">Ask me anything</a></p>
+      <p>&copy; <span id="year">2025</span></p>
+      <p><a href="mailto:contact@honma.de" aria-label="Email contact">contact@honma.de</a></p>
+      <p><a href="https://github.com/IOIO72/ama" target="_blank" rel="noopener">Ask me anything</a></p>
     </footer>
-
   </article>
-</main>
+</div>
 
+<script>
+  // Auto-update the year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
