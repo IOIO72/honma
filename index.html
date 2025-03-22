@@ -15,59 +15,59 @@
                                        |_|               |___/
   -->
   <style>
-      :root {
-          color-scheme: light dark;
+    :root {
+        color-scheme: light dark;
 
-          --light-bg: ghostwhite;
-          --light-shadow: gray;
-          --light-color: black;
-          --light-secondary: gray;
+        --light-bg: ghostwhite;
+        --light-shadow: gray;
+        --light-color: black;
+        --light-secondary: gray;
 
-          --dark-bg: black;
-          --dark-shadow: ghostwhite;
-          --dark-color: white;
-          --dark-secondary: ghostwhite;
-      }
+        --dark-bg: black;
+        --dark-shadow: ghostwhite;
+        --dark-color: white;
+        --dark-secondary: ghostwhite;
+    }
 
-      body {
-          margin: 0;
-          padding: 0;
-          font-family: system-ui, sans-serif;
-          background: light-dark(var(--light-bg), var(--dark-bg));
-          color: light-dark(var(--light-color), var(--dark-color));
-      }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, sans-serif;
+        background: light-dark(var(--light-bg), var(--dark-bg));
+        color: light-dark(var(--light-color), var(--dark-color));
+    }
 
-      article {
-          position: absolute;
-          margin: 3em 50%;
-          transform: translateX(-50%);
-          width: max-content;
-          max-width: 100%;
-          padding: 1em 2em;
-          box-shadow: 4px 4px 12px light-dark(var(--light-shadow), var(--dark-shadow));
-          border-radius: 4px;
-      }
+    article {
+        position: absolute;
+        margin: 3em 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        max-width: 100%;
+        padding: 1em 2em;
+        box-shadow: 4px 4px 12px light-dark(var(--light-shadow), var(--dark-shadow));
+        border-radius: 4px;
+    }
 
-      header {
-          margin-bottom: 2em;
-      }
+    header {
+        margin-bottom: 2em;
+    }
 
-      header > h1 {
-          margin-top: 0.5em;
-          margin-bottom: 0;
-          font-size: 2.5rem;
-      }
+    header > h1 {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        font-size: 2.5rem;
+    }
 
-      header > p {
-          margin-top: 0;
-          margin-bottom: 1.25em;
-          color: light-dark(var(--light-secondary), var(--dark-secondary));
-          font-style: italic;
-      }
+    header > p {
+        margin-top: 0;
+        margin-bottom: 1.25em;
+        color: light-dark(var(--light-secondary), var(--dark-secondary));
+        font-style: italic;
+    }
 
-      h2 {
-          margin-top: 1.75em;
-      }
+    h2 {
+        margin-top: 1.75em;
+    }
 
     ul, dl {
         margin-bottom: 2em;
@@ -98,26 +98,26 @@
         margin-top: 4em;
     }
 
-      footer p {
-          flex-grow: 1;
-          flex-shrink: 0;
-          margin: 0;
-          text-align: center;
-      }
+    footer p {
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin: 0;
+        text-align: center;
+    }
 
-      footer p:first-child {
-          text-align: left;
-      }
+    footer p:first-child {
+        text-align: left;
+    }
 
-      footer p:last-child {
-          text-align: right;
-      }
+    footer p:last-child {
+        text-align: right;
+    }
 
-      @media screen and (min-width: 481px) {
-          article {
-              padding: 2em 4em;
-          }
-      }
+    @media screen and (min-width: 481px) {
+        article {
+            padding: 2em 4em;
+        }
+    }
   </style>
 </head>
 <body>
